@@ -1,0 +1,401 @@
+/* CONFIGURAÇÕES GERAIS NÃO ALTERAR */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #9C6F43;
+    background-color: #fdfbf9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+
+/* MOBILE FIRST */
+
+.frases-cabecalho {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    background-color: #F7F5EF;
+    background-image: none;
+    padding: 15px;
+}
+
+.cor-cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+}
+
+.barra-pesquisa {
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',
+        'Lucida Grande', 'Lucida Sans Unicode',
+        Geneva, Verdana, sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+
+/* LINKS DE ACESSO */
+
+#acesso {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    min-height: 50px;
+}
+
+a {
+    color: #9C6F43;
+    text-decoration: none;
+}
+
+.botao-acesso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 8px 15px;
+    border: 2px solid #9C6F43;
+    border-radius: 6px;
+    background-color: #9C6F43;
+    color: #fcfce7;
+}
+
+.botao-acesso:hover {
+    background-color: #8c5827;
+    color: #fcfce7;
+}
+
+
+/* BANNER */
+
+.banner {
+    display: block;
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    max-height: 371px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+}
+
+
+/* TÍTULOS */
+
+h3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    margin: 2px;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+.titulo-vitrine {
+    padding: 15px;
+    text-align: center;
+}
+
+
+/* PRODUTOS */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 10px;
+}
+
+article {
+    width: 100%;
+    min-width: 0;
+}
+
+.imagem-produto {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+article h2 {
+    font-size: 16px;
+}
+
+article h5 {
+    font-size: 12px;
+}
+
+article p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.valor {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* INPUTS E BOTÕES */
+
+input {
+    width: 100%;
+    max-width: 100%;
+    background-color: #FDFCF9;
+    border: 2px solid #9C6F43;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #9C6F43;
+}
+
+button {
+    width: 100%;
+    background-color: #9C6F43;
+    color: #ece7fc;
+    border: 2px solid #8c5827;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 15px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #8c5827;
+    color: #ffffff;
+    border-color: #70451f;
+}
+
+
+/* NOVIDADES */
+
+#novidades {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+}
+
+#novidades form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+#novidades button {
+    margin-top: 0;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px 15px;
+    color: #9C6F43;
+    background-color: #FDFCF9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+.direitos {
+    text-align: center;
+}
+
+
+/* TABLET A PARTIR DE 760PX */
+
+@media screen and (min-width: 760px) {
+
+    /* Cabeçalho */
+
+    .frases-cabecalho {
+           display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    /* Navegação com imagem */
+
+    nav {
+        background-image: url("./img/cabecalho.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 201px;
+        padding: 5px 3%;
+    }
+
+    .cor-cabecalho {
+ 
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .barra-pesquisa {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    #acesso {
+        justify-content: flex-end;
+        gap: 20px;
+        width: auto;
+    }
+
+    /* Produtos */
+
+
+    main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+        padding: 30px;
+    }
+
+    article {
+        max-width: 350px;
+        justify-self: center;
+    }
+
+    article h2 {
+        font-size: 20px;
+    }
+
+    article p {
+        font-size: 15px;
+    }
+
+
+
+    /* Novidades */
+
+    #novidades {
+        width: 80%;
+    }
+
+    #novidades form {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #novidades input {
+        flex: 1;
+        min-width: 0;
+    }
+
+    #novidades button {
+        width: auto;
+        white-space: nowrap;
+    }
+
+}
+
+
+/*  DESKTOP (pc) A PARTIR DE 1024PX */
+
+@media screen and (min-width: 1024px) {
+
+    /* Cabeçalho */
+
+    .frases-cabecalho {
+        padding: 15px 4%;
+        font-size: 15px;
+    }
+
+    nav {
+        min-height: 322px;
+        padding: 5px 2%;
+        background-position: center;
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    #acesso {
+        gap: 30px;
+    }
+
+    /* Produtos */
+
+    .titulo-vitrine {
+        padding: 25px;
+    }
+
+     main {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 25px;
+        padding: 30px 20px;
+    }
+
+    article {
+        max-width: 300px;
+    }
+
+    article h2 {
+        font-size: 20px;
+    }
+
+
+    /* Novidades */
+
+    #novidades {
+        width: 600px;
+    }
+
+    /* Botões */
+
+    button {
+        max-width: 300px;
+    }
+
+}
